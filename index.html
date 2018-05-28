@@ -5,65 +5,60 @@
     <meta charset="utf-8">
     <title>Calendar</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style-2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header id="page">
-        <ul id="links">
-            <li>
-                <a href="#1">Calendar</a>
-            </li>
-            <li>
-                <a href="#2">Create</a>
-            </li>
-            <li>
-                <a href="#3">About</a>
-            </li>
-        </ul>
-    </header>
-    <div id="content"></div>
-    <div id="createCode" class="hidden">
-        <div id="options">
-            <fieldset>
-                <label>
-                    <input type="checkbox" id="changeMonth" checked>Allow to change a month</label>
-                <br>
-                <label>
-                    <input type="checkbox" id="addNotes" checked>Allow to add notes</label>
-                <br>
-                <label>
-                    <input type="checkbox" id="removeNotes" checked>Allow to remove notes</label>
-                <br>
-                <label>
-                    <input type="checkbox" id="showMonth" checked>Show month and year</label>
-                <br>
-            </fieldset>
+    <div class="container">
+        <header id="page">
+            <ul id="links">
+                <li>
+                    <a href="#1">Calendar</a>
+                </li>
+                <li>
+                    <a href="#2">Create</a>
+                </li>
+                <li>
+                    <a href="#3">About</a>
+                </li>
+            </ul>
+        </header>
+        <div id="content"></div>
+        <div id="createCode" class="hidden">
+            <div id="options">
+                <fieldset>
+                    <label>
+                        <input type="checkbox" id="changeMonth" checked>Allow to change a month</label>
+                    <br>
+                    <label>
+                        <input type="checkbox" id="addNotes" checked>Allow to add notes</label>
+                    <br>
+                    <label>
+                        <input type="checkbox" id="removeNotes" checked>Allow to remove notes</label>
+                    <br>
+                    <label>
+                        <input type="checkbox" id="showMonth" checked>Show month and year</label>
+                    <br>
+                </fieldset>
+            </div>
+            <div>
+                <div>
+                    <div id="code"></div>
+                </div>
+                <div id="calendarSettings"></div>
+            </div>
         </div>
-        <div>
-          <div>
-              <pre id="code"></pre>
-          </div>
-          <div id="calendarSettings"></div>
-        </div>
-    </div>
-    <div id="about" class="hidden">
-        <h1>
+        <div id="about" class="hidden">
+            <h1>
         Author <br>
-        Andrey Drozdou <br>
+        Andrey Drozdov <br>
         andreydro14@gmail.com <br>
-        https://github.com/andreydro <br>
+        <a href="https://github.com/andreydro">https://github.com/andreydro</a>
       </h1>
+        </div>
+        <script src="script.js"></script>
     </div>
-    <!--
-    <div id="block">
-      <p>Calendar</p>
-    </div>
-    <a onclick="setNewEntry('Pressed button 1'); return false" href="#">Button 1</a><br>
-    <a onclick="setNewEntry('Pressed button 2'); return false" href="#">Button 2</a><br>
-    <a onclick="setNewEntry(''); return false;" href="#">Clear block</a><br>  
--->
-    <script src="script.js"></script>
 </body>
 
 </html>

@@ -75,12 +75,22 @@ function displayCreate() {
 		var code = document.getElementById("code");
 		code.innerText =
 			"var calendar = new Calendar({\n" +
-			' element: "' + params.element + '", \n' +
-			" changeMonth: " + params.changeMonth + ", \n" +
-			" addNotes: " + params.addNotes + ", \n" +
-			" removeNotes: " + params.removeNotes + ", \n" +
-			" showMonth: " +params.showMonth + ",\n" +
-			"});"
+			' element: "' +
+			params.element +
+			'", \n' +
+			" changeMonth: " +
+			params.changeMonth +
+			", \n" +
+			" addNotes: " +
+			params.addNotes +
+			", \n" +
+			" removeNotes: " +
+			params.removeNotes +
+			", \n" +
+			" showMonth: " +
+			params.showMonth +
+			",\n" +
+			"});";
 	}
 }
 
@@ -98,7 +108,7 @@ function displayAuthor() {
 
 function Calendar(options) {
 	var htmlElement = document.querySelector(options.element);
-  
+
 	var table =
 		'<table><thead><tr><td class="left-button"><button class="left">&lt;</button></td>' +
 		'<td class="month" colspan="3"></td><td class="year" colspan="2"></td><td class="right-button">' +
@@ -109,7 +119,6 @@ function Calendar(options) {
 	table += "<tbody></tbody>";
 
 	htmlElement.innerHTML = table + "</table>";
-	
 
 	var tbody = htmlElement.querySelector("tbody");
 
@@ -119,18 +128,18 @@ function Calendar(options) {
 	var year = htmlElement.querySelector("td.year");
 
 	var months = [
-		"Январь",
-		"Февраль",
-		"Март",
-		"Апрель",
-		"Май",
-		"Июнь",
-		"Июль",
-		"Август",
-		"Сентябрь",
-		"Октябрь",
-		"Ноябрь",
-		"Декабрь"
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"October",
+		"November",
+		"December"
 	];
 
 	var storage;
@@ -184,14 +193,16 @@ function Calendar(options) {
 		}
 
 		tbody.innerHTML = table;
-		console.log(tbody);
 
 		for (var time in storage) {
 			var today = new Date(+time);
 
-			if (today.getFullYear() == calendar.getFullYear() && today.getMonth() == calendar.getMonth()) {
+			if (
+				today.getFullYear() == calendar.getFullYear() &&
+				today.getMonth() == calendar.getMonth()
+			) {
 				var td = tbody.querySelector('td[day="' + today.getDate() + '"]');
-			  
+
 				var notes = td.querySelector("div");
 				if (!notes) {
 					notes = document.createElement("div");
