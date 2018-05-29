@@ -145,9 +145,9 @@ function Calendar(options) {
 		storage = {};
 	}
 
-	drawDays();
+	addDays();
 
-	function drawDays() {
+	function addDays() {
 		var date = new Date(calendar);
 		date.setDate(1);
 		if (options.showMonth) {
@@ -216,11 +216,11 @@ function Calendar(options) {
 	if (options.changeMonth) {
 		htmlElement.querySelector("button.left").onclick = function() {
 			calendar.setMonth(calendar.getMonth() - 1);
-			drawDays();
+			addDays();
 		};
 		htmlElement.querySelector("button.right").onclick = function() {
 			calendar.setMonth(calendar.getMonth() + 1);
-			drawDays();
+			addDays();
 		};
 	} else {
 		htmlElement.querySelector("button.left").style.display = "none";

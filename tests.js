@@ -129,20 +129,20 @@ describe("Calendar", function() {
     });
 
     it("Generates different html for different months", function() {
-    	var rightButton = document.querySelector(".right");
-    	var html1 = document.getElementById("calendarSettings").innerHTML;
-    	rightButton.click();
-    	var html2 = document.getElementById("calendarSettings").innerHTML;
-    	assert.isOk(html1 !== html2);
-    	rightButton.click();
-    	rightButton.click();
-    	rightButton.click();
-    	var html2 = document.getElementById("calendarSettings").innerHTML;
-    	assert.isOk(html1 !== html2);
-    	rightButton.click();
-    	rightButton.click();
-    	var html2 = document.getElementById("calendarSettings").innerHTML;
-    	assert.isOk(html1 !== html2);
+        var rightButton = document.querySelector(".right");
+        var html1 = document.getElementById("calendarSettings").innerHTML;
+        rightButton.click();
+        var html2 = document.getElementById("calendarSettings").innerHTML;
+        assert.isOk(html1 !== html2);
+        rightButton.click();
+        rightButton.click();
+        rightButton.click();
+        var html2 = document.getElementById("calendarSettings").innerHTML;
+        assert.isOk(html1 !== html2);
+        rightButton.click();
+        rightButton.click();
+        var html2 = document.getElementById("calendarSettings").innerHTML;
+        assert.isOk(html1 !== html2);
     })
 
 })
