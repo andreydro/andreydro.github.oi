@@ -92,7 +92,7 @@ function displayCreate() {
 			",\n" +
 			"});";
 	}
-}
+	}
 
 function displayAuthor() {
 	var content = document.getElementById("content");
@@ -100,13 +100,8 @@ function displayAuthor() {
 	content.innerHTML = about.innerHTML;
 }
 
-/*
-*
-* @param {object} options
-*/
-// drawCalendar
-
 function Calendar(options) {
+
 	var htmlElement = document.querySelector(options.element);
 
 	var table =
@@ -217,7 +212,7 @@ function Calendar(options) {
 			}
 		}
 	}
-
+  
 	if (options.changeMonth) {
 		htmlElement.querySelector("button.left").onclick = function() {
 			calendar.setMonth(calendar.getMonth() - 1);
@@ -293,4 +288,5 @@ function Calendar(options) {
 		}
 		return p;
 	}
+
 }
